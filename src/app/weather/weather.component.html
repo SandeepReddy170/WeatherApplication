@@ -1,0 +1,18 @@
+  <form #f="ngForm" (ngSubmit)="getTemperature(f.value)">
+  <div class="form-group">
+    <label for="zipCodeId">zip code:</label>
+    <input 
+      [(ngModel)]="zipCode"
+      name="zipCode"
+      type="text" 
+      class="form-control" 
+      id="zipCodeId"
+      (keyup.enter)="getTemp()">
+  </div>
+  <button class="btn btn-primary">Get Temperature</button>
+</form>
+  
+<div class="form-group">
+  <label for="Temperature"><b>Temperature:</b></label>
+  <h2>{{ postObject?.temperature }}</h2>
+</div>
